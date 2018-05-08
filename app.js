@@ -1,5 +1,5 @@
-var express = require('express'); 
-var app = express(); 
+var express = require('express');
+var app = express();
 var bodyParser = require('body-parser');
 var multer = require('multer');
 // var http = require('http');
@@ -32,7 +32,7 @@ function sendEmail(i){
     fs.readFile('pdfs/'+ modifiedFirstName +'.pdf',function(err,data){
             var params = {
                 // to: destinationEmail,
-                to: 'attacktitan100@gmail.com',
+                to: 'akshayanand681@gmail.com',
                 from: 'sampark@shaastra.org',
                 fromname: 'Shaastra Outreach',
                 subject: 'E-certificate || Shaastra Sampark ',
@@ -55,7 +55,7 @@ function sendEmail(i){
 }
 
 function pdfConvert(i){
-    
+
   //   var dummyContent ='<!DOCTYPE html><html><head></head>'+
 		// '<body><img style="width:95% ;" src="../uploads/participation.jpg">'+
 		// '<style>  @font-face {font-family: Myfont;  src: url("./OpenSans-SemiboldItalic.ttf");} h2{ text-align: center;color: #053565;font-size:30px;font-family:Myfont;}</style>' +
@@ -95,7 +95,7 @@ function pdfConvert(i){
             util.log(stderr);
             // console.log("came to send mail");
             // sendEmail(i);
-        });    
+        });
     });
     // pdf.create(dummyContent).toFile(pdfFileName, function(err, res){
     //   console.log("created ",res.filename);
@@ -104,7 +104,8 @@ function pdfConvert(i){
 }
 // console.log("data ",data);
 console.log("Path\n\n",__dirname);
+console.log(data);
 for(var i=0; i<data.length; i++){
 // for(var i=0; i<1; i++){
-    pdfConvert(i);
+    //pdfConvert(i);
 }
