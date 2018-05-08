@@ -95,7 +95,7 @@ var sheet = 'Sheet28';
      var text_body = "<html><body>Hello " + data[i].Name+ "!<br><br>PFA the Certificates. <br>"+
      "Open only in the latest Adobe Reader Version in PC.</body></html>";
 
-     var fileName = 'certis_signed/'+ modifiedFirstName + ' (5).pdf';
+     var fileName = 'certis_signed/'+ modifiedFirstName + '.pdf';
      fs.readFile(fileName,function(err,data){
               if (err) {console.log(err);}
               else {
